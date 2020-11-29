@@ -12,5 +12,5 @@ header('Pragma: public');
 header('Content-Length: ' . filesize($file));
 ob_clean();
 flush();
-readfile('/projet_web/home' . $file);
+readfile('./' . $file);
 exit();
