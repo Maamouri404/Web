@@ -1,5 +1,7 @@
 <?php
-$file = 'Resume A4.docx';
+$_GET["name"];
+
+$file = $_GET["name"];
 
 header('Content-Description: File Transfer');
 header('Content-Type: application/vnd.openxmlformats-officedocument.wordprocessingml.document');
