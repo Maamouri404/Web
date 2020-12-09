@@ -284,7 +284,7 @@ include 'uploadTemp.php'
                 </div>
                 <!-- .container end -->
             </div>
-            <!-- .footer-widget end -->
+            <!-- .footer-widget end. -->
         </footer>
 
 
