@@ -1,59 +1,62 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
 <style>
-    .nav-i {
-        color: #606da6!important;
-        font-weight: bold !important;
-    }
-
-    .nav-i:hover {
-        color: #000000 !important;
-    }
-
-    .imgfill {
-        height: 100% !important;
-        width: 100% !important;
-        padding: 1em;
-    }
-
-    .backlst {
-        background-color: #f0f5f9 !important;
-    }
-    .icon-bar {
-  z-index: 12;
-  position: fixed;
-  right: -15px;
-  top: 85%;
-  -webkit-transform: translateY(-50%);
-  -ms-transform: translateY(-50%);
-  transform: translateY(-50%);
+.nav-i {
+    color: #606da6 !important;
+    font-weight: bold !important;
 }
-#addTEMPbtnICON{
-    padding-left:20px;
+
+.nav-i:hover {
+    color: #000000 !important;
 }
+
+.imgfill {
+    height: 100% !important;
+    width: 100% !important;
+    padding: 1em;
+}
+
+.backlst {
+    background-color: #f0f5f9 !important;
+}
+
+.icon-bar {
+    z-index: 12;
+    position: fixed;
+    right: -15px;
+    top: 85%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#addTEMPbtnICON {
+    padding-left: 20px;
+}
+
 #addTEMPbtn {
-  display: block !important ;
-  text-align: center !important;
-  padding-right: 30px ;
-  transition: all 0.3s ease !important;
-  color: #fff !important;
-  font-size: 20px !important;
-  border: none;
-  height:50px !important;
+    display: block !important;
+    text-align: center !important;
+    padding-right: 30px;
+    transition: all 0.3s ease !important;
+    color: #fff !important;
+    font-size: 20px !important;
+    border: none;
+    height: 50px !important;
 
 }
 
 #addTEMPbtn:hover {
-  background-color: #000 !important;
+    background-color: #000 !important;
 
 }
 
 .Addtemp {
-  background: #606da6 !important;
-  color: white !important;
-  border-radius: 50px 0% 0% 50px !important ;
-  width: 60px !important;
-  height: 60px !important;
+    background: #606da6 !important;
+    color: white !important;
+    border-radius: 50px 0% 0% 50px !important;
+    width: 60px !important;
+    height: 60px !important;
 
 }
 </style>
@@ -72,12 +75,15 @@
 
     <!-- Fonts
     ============================================= -->
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i%7CMontserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CPlayfair+Display:400,400i" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i%7CMontserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i%7CPlayfair+Display:400,400i"
+        rel="stylesheet">
 
     <!-- Stylesheets
     ============================================= -->
     <link href="assets/css/external.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
@@ -111,7 +117,8 @@
             <nav id="primary-menu" class="navbar navbar-expand-lg navbar-light">
                 <div class="container-fluid">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="#"><img style="width: 160px; height: 56px;" src="/projet_web/home/assets/images/logo/logo-cv3.png" alt=""></a>
+                        <a class="navbar-brand" href="#"><img style="width: 160px; height: 56px;"
+                                src="/projet_web/home/assets/images/logo/logo-cv3.png" alt=""></a>
                     </div>
                     <ul class="nav navbar-nav">
                         <li><a class="nav-i" href="./home-6.html">Home</a></li>
@@ -162,7 +169,7 @@
                     <div class="col-sm-12 col-md-12 col-lg-12 category-options">
                         <div class="category-num pull-left pull-none-xs">
 
-                        <?php
+                            <?php
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
 include 'nbTemp.php'
@@ -179,8 +186,8 @@ include 'nbTemp.php'
                                         <i class="fa fa-caret-down"></i>
                                         <select>
                                             <option selected="" value="">Categories</option>
-                                            <option  value="">Trending</option>
-                                            <option  value="">Latest</option>
+                                            <option value="">Trending</option>
+                                            <option value="">Latest</option>
 
                                         </select>
                                     </div>
@@ -205,7 +212,7 @@ include 'nbTemp.php'
                 </div>
                 <!-- .row end -->
                 <div class="row row-no-padding mb-60 ">
-<?php
+                    <?php
 include 'uploadTemp.php'
 ?>
                 </div>
@@ -228,6 +235,7 @@ include 'uploadTemp.php'
                 <!-- .row end -->
             </div>
             <!-- .container end -->
+
         </section>
         <!-- #category end -->
 
@@ -250,7 +258,8 @@ include 'uploadTemp.php'
                         <div class="col-sm-12 col-md-12 col-lg-4 text-center widget--logo ">
                             <div class="widget--content ">
                                 <div class="widget--logo-img ">
-                                    <img style="width: 160px; height: 56px; " src="/projet_web/home/assets/images/logo/logo-cv3.png " alt="logo ">
+                                    <img style="width: 160px; height: 56px; "
+                                        src="/projet_web/home/assets/images/logo/logo-cv3.png " alt="logo ">
                                 </div>
                             </div>
                             <div class="footer--copyright ">
@@ -259,7 +268,8 @@ include 'uploadTemp.php'
                             <!-- .footer-copyright end -->
                         </div>
                         <!-- .col-lg-4 end -->
-                        <div class="col-sm-12 col-md-12 col-lg-4 text-right text-center-xs text-center-sm widget--social ">
+                        <div
+                            class="col-sm-12 col-md-12 col-lg-4 text-right text-center-xs text-center-sm widget--social ">
                             <div class="widget--content ">
                                 <div class="social--icons ">
                                     <span>Follow Us On Social</span>
@@ -289,46 +299,51 @@ include 'uploadTemp.php'
 
 
         <div class="icon-bar">
-        <button id="addTEMPbtn" type="button" class="Addtemp btn btn--primary btn--block mb-30" data-toggle="modal" data-target="#newsletter-popup"><i id="addTEMPbtnICON" class="fa fa-folder-plus fa-lg"></i></button>
+            <button id="addTEMPbtn" type="button" class="Addtemp btn btn--primary btn--block mb-30" data-toggle="modal"
+                data-target="#newsletter-popup"><i id="addTEMPbtnICON" class="fa fa-folder-plus fa-lg"></i></button>
         </div>
-  <div class="modal fade newsletter-popup" id="newsletter-popup" tabindex="-1" role="dialog" >
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-body">
-                <div class="row">
-                    <div class="col-sm-12 col-md-6 col-lg-5 pl-0">
-                        <div class="modal--img">
-                            <img src="assets/images/popup/1.jpg" alt="img" class="img-fluid">
+        <div class="modal fade newsletter-popup" id="newsletter-popup" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="row" style="height:80vh">
+                            <div class="col-sm-12 col-md-6 col-lg-5 pl-0">
+                                <div class="modal--img">
+                                    <img src="assets/images/popup/1.jpg" alt="img" class="img-fluid"
+                                        style="height:80vh">
+                                </div>
+                            </div>
+                            <!-- .col-lg-5 end -->
+                            <div class="col-sm-12 col-md-6 col-lg-7">
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                        aria-hidden="true">&times;</span></button>
+
+                                <form enctype="multipart/form-data" action="filesLogic.php" method="post">
+                                    <h3>Upload File</h3>
+                                    <input type="file" name="myfile"> <br>
+                                    <input type="file" name="myimg"> <br>
+                                    <button type="submit" class="btn btn--primary btn--rounded" name="save">upload<i
+                                            class="lnr lnr-arrow-right"></i></button>
+                                </form>
+
+
+                            </div>
+                            <!-- .col-lg-7 end -->
                         </div>
+                        <!-- .row end -->
                     </div>
-                    <!-- .col-lg-5 end -->
-                    <div class="col-sm-12 col-md-6 col-lg-7">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-
-                        <form enctype="multipart/form-data" action="filesLogic.php" method="post" >
-                            <h3>Upload File</h3>
-                            <input type="file" name="myfile"> <br>
-                            <input type="file" name="myimg"> <br>
-                            <button type="submit"class="btn btn--primary btn--rounded" name="save">upload<i class="lnr lnr-arrow-right"></i></button>
-                        </form>
-
-                    </div>
-                    <!-- .col-lg-7 end -->
                 </div>
-                <!-- .row end -->
+                <!-- .modal-content end -->
             </div>
         </div>
-        <!-- .modal-content end -->
-    </div>
-</div>
 
 
-    <!-- Foot Scripts
+        <!-- Foot Scripts
 ============================================= -->
-    <script src="assets/js/jquery-3.3.1.min.js "></script>
-    <script src="assets/js/plugins.js "></script>
-    <script src="assets/js/functions.js "></script>
-    <script src="https://kit.fontawesome.com/ddd5622fc1.js" crossorigin="anonymous"></script>
+        <script src="assets/js/jquery-3.3.1.min.js "></script>
+        <script src="assets/js/plugins.js "></script>
+        <script src="assets/js/functions.js "></script>
+        <script src="https://kit.fontawesome.com/ddd5622fc1.js" crossorigin="anonymous"></script>
 
 </body>
 
