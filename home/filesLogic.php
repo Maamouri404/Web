@@ -30,11 +30,11 @@ if (isset($_POST['save'])) { // if save button on the form is clicked
     if (move_uploaded_file($file, $destination)) {
         $sql = "INSERT INTO templates (file_name) VALUES ('$withoutExt')";
         if (mysqli_query($conn, $sql)) {
-            header('Location:http://localhost/projet_web/home/shop-layout-fullwidth.php?message=Template Added successfully');
+            header('Location:http://localhost/projet_web/home/shop-layout-fullwidth.php?type=success&message=Template Added successfully');
 
         }
     } else {
-        header('Location:http://localhost/projet_web/home/shop-layout-fullwidth.php?message=Failed to upload file.');
+        header('Location:http://localhost/projet_web/home/shop-layout-fullwidth.php?type=error&message=Failed to upload file');
 
     }
 

@@ -83,7 +83,7 @@
     ============================================= -->
     <link href="assets/css/external.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
@@ -104,11 +104,21 @@
     </div>
     <?php if (!empty($_GET['message'])) {
     $message = $_GET['message'];
-    echo '<script>alert("' . $message . '")</script>';
+    $type = $_GET['type'];
+    echo '<script>
+    document.addEventListener("DOMContentLoaded", () => {
+
+        Swal.fire({
+            position: "top-end",
+            icon: "' . $type . '",
+            title: "' . $message . '",
+            showConfirmButton: false,
+            timer: 2000
+        })
+    })
+    </script>';
 }
 ?>
-
-
 
     <!-- Document Wrapper
 	============================================= -->
@@ -322,9 +332,12 @@ include 'uploadTemp.php'
                                     <h3>Upload File</h3>
                                     <input type="file" name="myfile"> <br>
                                     <input type="file" name="myimg"> <br>
-                                    <button type="submit" class="btn btn--primary btn--rounded" name="save">upload<i
+
+                                    <button type="submit" class="btn btn--primary btn--rounded " name="save">upload<i
                                             class="lnr lnr-arrow-right"></i></button>
+
                                 </form>
+
 
 
                             </div>
@@ -340,6 +353,7 @@ include 'uploadTemp.php'
 
         <!-- Foot Scripts
 ============================================= -->
+
         <script src="assets/js/jquery-3.3.1.min.js "></script>
         <script src="assets/js/plugins.js "></script>
         <script src="assets/js/functions.js "></script>

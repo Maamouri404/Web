@@ -9,4 +9,4 @@ $file = $_GET["name"];
 $sql = $db->query('delete FROM templates where file_name="' . $file . '"');
 mysqli_query($db, $sql);
 
-header('Location:http://localhost/projet_web/home/shop-layout-fullwidth.php?message=Template deleted successfully.');
+header('Location:http://localhost/projet_web/home/shop-layout-fullwidth.php?type=warning&message=Template deleted successfully.');
