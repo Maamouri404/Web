@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html dir="ltr" lang="en-US">
+
 <style>
 .nav-i {
     color: #606da6 !important;
@@ -73,6 +74,9 @@
     <link href="assets/images/favicon/iconl.png" rel="icon">
 
 
+
+
+
     <!-- Fonts
     ============================================= -->
     <link
@@ -83,7 +87,11 @@
     ============================================= -->
     <link href="assets/css/external.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
+
+
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements. All other JS at the end of file. -->
     <!--[if lt IE 9]>
@@ -316,11 +324,11 @@ include 'uploadTemp.php'
             <div class="modal-dialog" role="document">
                 <div class="modal-content">
                     <div class="modal-body">
-                        <div class="row" style="height:80vh">
+                        <div class="row" style="height:80vh;">
                             <div class="col-sm-12 col-md-6 col-lg-5 pl-0">
                                 <div class="modal--img">
-                                    <img src="assets/images/popup/1.jpg" alt="img" class="img-fluid"
-                                        style="height:80vh">
+                                    <img src="assets/images/popup/3.jpg" alt="img" class="img-fluid"
+                                        style="height:80vh; ">
                                 </div>
                             </div>
                             <!-- .col-lg-5 end -->
@@ -337,6 +345,7 @@ include 'uploadTemp.php'
                                             class="lnr lnr-arrow-right"></i></button>
 
                                 </form>
+
 
 
 
