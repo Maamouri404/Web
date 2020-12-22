@@ -18,7 +18,7 @@ if ($query->num_rows > 0) {
                 <div class="product--hover">
                     <div class="product--action">
 
-                        <a data-toggle="modal" data-target="#product-popup"><i class="fas fa-eye"></i></a>
+                        <a data-toggle="modal" data-target="#product-popup" onclick="fct('.$row["file_name"].')"><i class="fas fa-eye"></i></a>
                         <a href=" download.php?name=templates/' . $row["file_name"] . '.docx "><i class="fa fa-arrow-down"></i></a>
                         <a href="delete.php?name=' . $row["file_name"] . '"><i class="fas fa-trash"></i></a>
                         </div>

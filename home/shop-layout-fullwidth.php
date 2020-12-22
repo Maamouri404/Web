@@ -60,6 +60,61 @@
     height: 60px !important;
 
 }
+
+.file-field {
+    position: relative
+}
+
+.file-field .file-path-wrapper {
+
+    padding-left: 10px;
+    overflow: hidden
+}
+
+.file-field input.file-path {
+    width: 60%;
+    height: 36px;
+    color: #00c851;
+    font-size: 1.4em;
+}
+
+.file-field .btn {
+    float: left
+}
+
+.file-field span {
+    cursor: pointer
+}
+
+.file-field input[type="file"] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    filter: alpha(opacity=0);
+    opacity: 0
+}
+
+.file-field input[type="file"]::-webkit-file-upload-button {
+    display: none
+}
+
+.wasatni {
+    margin-top: 11vh !important;
+    padding-left: 4vh;
+
+}
+
+#addtitle {
+    color: #606da6;
+    margin-top: 20%;
+    margin-left: 23%;
+}
 </style>
 
 <head>
@@ -77,6 +132,7 @@
 
 
 
+
     <!-- Fonts
     ============================================= -->
     <link
@@ -85,9 +141,10 @@
 
     <!-- Stylesheets
     ============================================= -->
+    <link rel="stylesheet" href="assets/css/mdb.min.css">
     <link href="assets/css/external.css" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
-
+    <link rel="stylesheet" href="assets/css/btn.css">
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -132,7 +189,7 @@
 	============================================= -->
     <div id="wrapperParallax" class="wrapper clearfix">
         <header id="navbar-spy" class="header header-1  header-6 header-transparent header-white">
-            <nav id="primary-menu" class="navbar navbar-expand-lg navbar-light">
+            <nav id="primary-menu" class="navbar navbar-expand-lg navbar-light" style=" box-shadow:none !important; ">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <a class="navbar-brand" href="#"><img style="width: 160px; height: 56px;"
@@ -255,6 +312,8 @@ include 'uploadTemp.php'
             <!-- .container end -->
 
         </section>
+
+
         <!-- #category end -->
 
         <!-- Footer #2
@@ -281,7 +340,7 @@ include 'uploadTemp.php'
                                 </div>
                             </div>
                             <div class="footer--copyright ">
-                                <span>&copy; 2019 Hebes - All Rights Reserved, by </span><a href="# ">ηγέτης</a>
+                                <span>&copy; 2021 CV TEMP - All Rights Reserved, by </span><a href="# ">ηγέτης</a>
                             </div>
                             <!-- .footer-copyright end -->
                         </div>
@@ -336,20 +395,37 @@ include 'uploadTemp.php'
                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
                                         aria-hidden="true">&times;</span></button>
 
-                                <form enctype="multipart/form-data" action="filesLogic.php" method="post">
-                                    <h3>Upload File</h3>
-                                    <input type="file" name="myfile"> <br>
-                                    <input type="file" name="myimg"> <br>
+                                <h4 id="addtitle">Add Template</h4>
+                                <form class="md-form wasatni" enctype="multipart/form-data" action="filesLogic.php"
+                                    method="post">
+                                    <div class="file-field">
+                                        <a class="btn-floating purple-gradient mt-0 float-left">
+                                            <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
+                                            <input type="file" name="myfile">
+                                        </a>
+                                        <div class="file-path-wrapper">
+                                            <input class="file-path validate" type="text"
+                                                placeholder="Upload template file">
 
+                                        </div>
+                                    </div><br>
+                                    <div class="file-field">
+                                        <a class="btn-floating purple-gradient mt-0 float-left">
+                                            <i class="fas fa-cloud-upload-alt" aria-hidden="true"></i>
+                                            <input type="file" name="myimg">
+                                        </a>
+                                        <div class="file-path-wrapper">
+                                            <input class="file-path validate" type="text"
+                                                placeholder="Upload template image">
+
+                                        </div>
+                                    </div> <br>
                                     <button type="submit" class="btn btn--primary btn--rounded " name="save">upload<i
                                             class="lnr lnr-arrow-right"></i></button>
-
                                 </form>
 
-
-
-
                             </div>
+
                             <!-- .col-lg-7 end -->
                         </div>
                         <!-- .row end -->
@@ -360,9 +436,144 @@ include 'uploadTemp.php'
         </div>
 
 
+        <!-- .......................................................................
+...................................product-popup....................................
+............................................................................-->
+
+
+        <div class="modal model-bg-light fade product-popup " id="product-popup" tabindex="-1" role="dialog">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                aria-hidden="true">&times;</span></button>
+                        <div class="product-detalis product-detalis-3 product-detalis-10 pt-0 pb-0">
+                            <div class="row">
+                                <div class="col-sm-12 col-md-12 col-lg-6">
+                                    <div class="products-gallery-carousel products-gallery-carousel-2">
+                                        <div class="owl-carousel products-slider" data-slider-id="1">
+                                            <div class="product-img" id="bigimg">
+
+                                            </div>
+                                            <div class="product-img">
+                                                <img src="assets/images/products/gallery/1-1 (1).jpg"
+                                                    style="height:540px" alt="product">
+                                            </div>
+                                            <div class="product-img">
+                                                <img src="assets/images/products/gallery/1-1 (4).jpg"
+                                                    style="height:540px" alt="product">
+                                            </div>
+                                            <div class="product-img">
+                                                <img src="assets/images/products/gallery/1-1 (3).jpg"
+                                                    style="height:540px" alt="product">
+                                            </div>
+                                        </div>
+                                        <div class="owl-thumbs thumbs-bg" data-slider-id="1">
+                                            <button class="owl-thumb-item">
+                                                <img src="assets/images/products/gallery/thumb/17.png"
+                                                    alt="product thumb">
+                                            </button>
+                                            <button class="owl-thumb-item">
+                                                <img src="assets/images/products/gallery/thumb/18.png"
+                                                    alt="product thumb">
+                                            </button>
+                                            <button class="owl-thumb-item">
+                                                <img src="assets/images/products/gallery/thumb/19.png"
+                                                    alt="product thumb">
+                                            </button>
+                                            <button class="owl-thumb-item">
+                                                <img src="assets/images/products/gallery/thumb/20.png"
+                                                    alt="product thumb">
+                                            </button>
+                                        </div>
+                                        <!-- .owl-thumbs end -->
+                                    </div>
+                                    <!-- .products-gallery-carousel end -->
+                                </div>
+                                <!-- .col-lg-7 end -->
+                                <div class="col-sm-12 col-md-12 col-lg-6">
+
+                                    <div class="product--title">
+                                        <h3 id="titl"></h3>
+                                    </div>
+                                    <div class="product--rating"> <i class="fa fa-star active"></i> <i
+                                            class="fa fa-star active"></i> <i class="fa fa-star active"></i> <i
+                                            class="fa fa-star active"></i> <i class="fa fa-star"></i> </div>
+                                    <div class="product--review">Overall Review</div>
+                                    <script src="assets/js/btn.js"></script>
+                                    <div class="btntn">
+                                        <a href="#" class="btn-liquid">
+                                            <span class="inner">Edit Template</span>
+                                        </a>
+                                    </div>
+
+                                    <svg viewBox="45 60 400 320" id="svgg">
+
+                                        <path fill="#8117dd"
+                                            d="M 90 210 C 90 180 90 150 90 150 C 150 150 180 150 180 150 C 180 150 300 150 300 150 C 300 150 330 150 390 150 C 390 150 390 180 390 210 C 390 240 390 270 390 270 C 330 270 300 270 300 270 C 300 270 180 270 180 270 C 180 270 150 270 90 270 C 90 270 90 240 90 210"
+                                            mask="url(#knockout-text)">
+                                        </path>
+                                        <mask id="knockout-text">
+                                            <rect width="100%" height="100%" fill="#fff" x="0" y="0" />
+                                            <text x="158" y="220" fill="#000">DOWNLOAD</text>
+                                        </mask>
+                                    </svg>
+                                    <div class="product--meta">
+
+
+                                        <!-- .product-meta-select end -->
+                                        <div class="product--meta-action clearfix mb-0" style="margin-top:6vh;">
+
+                                            <div class="clearfix">
+                                                <div class="pull-left">
+                                                    <a href="#" class="fav"><i class="ti-heart"></i></a>
+
+                                                </div>
+                                                <div class="product--share pull-right">
+                                                    <a class="share-facebook" href="#"><i
+                                                            class="fa fa-facebook"></i></a>
+                                                    <a class="share-twitter" href="#"><i class="fa fa-twitter"></i></a>
+                                                    <a class="share-google-plus" href="#"><i
+                                                            class="fa fa-pinterest-p"></i></a>
+                                                    <a class="share-linkedin" href="#"><i
+                                                            class="fa fa-linkedin"></i></a>
+                                                </div>
+                                            </div>
+                                            <!-- .product-share end -->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!-- .col-lg-6 end -->
+                            </div>
+                            <!-- .row end -->
+
+                        </div>
+                        <!-- .modal-body end -->
+                    </div>
+                </div>
+                <!-- .modal-content end -->
+            </div>
+            <!-- .modal-dialog end -->
+        </div>
+        <script>
+        var idfile;
+
+        function fct(fid) {
+            idfile = fid;
+            document.getElementById("bigimg").innerHTML =
+                '<img src="assets/images/listtemp/' + fid +
+                '.jpg" alt="template" style="height:525px; box-shadow: 5px 5px 5px gray;">';
+            document.getElementById("titl").innerHTML = 'Template Model ' + fid;
+
+        }
+        document.getElementById("svgg").addEventListener("click", function() {
+            window.location.href = 'download.php?name=templates/' + idfile + '.docx';
+        });
+        </script>
         <!-- Foot Scripts
 ============================================= -->
-
+        <script src="assets/js/mdb.min.js"></script>
         <script src="assets/js/jquery-3.3.1.min.js "></script>
         <script src="assets/js/plugins.js "></script>
         <script src="assets/js/functions.js "></script>
