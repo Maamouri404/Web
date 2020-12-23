@@ -1,0 +1,7 @@
+@media screen and (max-width: 768px) {
+  .container {
+    width: calc( 100% - 30px);
+    max-width: 100%;
+  }
+}
+/*# sourceMappingURL=responsive.css.map */

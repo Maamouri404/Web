@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="/projet_web/home/assets/images/favicon/iconl.png" rel="icon">
+
+    <title>CV TEMP | Templates Edit</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+
+
+    <!-- Font Icon -->
+
+    <link rel="stylesheet" href="fonts/material-icon/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="vendor/jquery-ui/jquery-ui.min.css">
+
+    <!-- Main css -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+<script>
+    $(document).ready(function() {
+
+
+        var readURL = function(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function(e) {
+                    $('.profile-pic').attr('src', e.target.result);
+                }
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+
+
+        $(".file-upload").on('change', function() {
+            readURL(this);
+        });
+
+        $(".upload-button").on('click', function() {
+            $(".file-upload").click();
+        });
+    });
+</script>
+
+<body>
+
+    <div class="main">
+
+        <section class="signup">
+            <!-- <img src="images/signup-bg.jpg" alt=""> -->
+            <div class="container">
+
+                <div class="signup-content">
+                    <form method="POST" id="signup-form" class="signup-form">
+
+                        <div class="foggous" style="width: 50% !important;">
+                            <div class="row">
+                                <div class="small-12 medium-2 large-2 columns">
+                                    <div class="circle">
+                                        <!-- User Profile Image -->
+                                        <img class="profile-pic" src="https://www.cregybad.org/wp-content/uploads/2017/10/user.png">
+
+
+                                    </div>
+                                    <div class="p-image">
+                                        <i class="fa fa-camera upload-button"></i>
+                                        <input class="file-upload" type="file" accept="image/*" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="first_name">First name</label>
+                                <input type="text" class="form-input" name="first_name" id="first_name" />
+                            </div>
+                            <div class="form-group">
+                                <label for="last_name">Last name</label>
+                                <input type="text" class="form-input" name="last_name" id="last_name" />
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group form-icon">
+                                <label for="birth_date">Birth date</label>
+                                <input type="text" class="form-input" name="birth_date" id="birth_date" placeholder="MM-DD-YYYY" />
+                            </div>
+                            <div class="form-radio">
+                                <label for="gender">Gender</label>
+                                <div class="form-flex">
+                                    <input type="radio" name="gender" value="male" id="male" checked="checked" />
+                                    <label for="male">Male</label>
+
+                                    <input type="radio" name="gender" value="female" id="female" />
+                                    <label for="female">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-text">
+                            <a href="#" class="add-info-link"><i class="zmdi zmdi-chevron-right"></i>Profile</a>
+                            <div class="add_info">
+                                <div class="form-group">
+                                    <label for="email">Profile</label>
+                                    <textarea class="form-input" cols="64" rows="10" form="signup-form"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-text">
+                            <a href="#" class="add-info-link1"><i class="zmdi zmdi-chevron-right"></i>Work Experience</a>
+                            <div class="add_info1">
+                                <div class="form-group">
+                                    <label for="email">Job Title</label>
+                                    <textarea class="form-input" cols="64" rows="8" form="signup-form"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-text">
+                            <a href="#" class="add-info-link2"><i class="zmdi zmdi-chevron-right"></i>Education</a>
+                            <div class="add_info2">
+                                <div class="form-group">
+                                    <label for="education">Education</label>
+                                    <textarea class="form-input" cols="64" rows="8" form="signup-form"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-text"></div>
+                        <a href="#" class="add-info-link3"><i class="zmdi zmdi-chevron-right"></i>Social Media</a>
+                        <div class="add_info3">
+                            <div class="form-group">
+                                <label for="email">Email</label>
+                                <input type="email" class="form-input" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">LinkedIn</label>
+                                <input type="text" class="form-input" />
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Phone</label>
+                                <input type="text" class="form-input" placeholder="+216********" />
+                            </div>
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="country">Country</label>
+                                    <div class="select-list">
+                                        <select name="country" id="country" required>
+                                                <option value="US">United State</option>
+                                                <option value="UK">England</option>
+                                                <option value="canada">Canada</option>
+                                                <option value="VN">Viet Nam</option>
+                                                <option value="TN">Tunisia</option>
+                                                <option value="FR">France</option>
+                                                <option value="GR">Germany</option>
+                                            </select>
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="city">City</label>
+                                    <div class="select-list">
+                                        <select name="city" id="city" required>
+                                                <option value="NY">NewYork</option>
+                                                <option value="IC">IceLand</option>
+                                                <option value="JN">Jendouba</option>
+                                                <option value="NB">Nabeul</option>
+                                                <option value="LN">London</option>
+                                                <option value="BR">Berlin</option>
+                                                <option value="PR">Paris</option>
+                                            </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+                <div class="form-group">
+                    <input type="submit" name="submit" id="submit" class="form-submit" value="Submit" />
+                </div>
+                </form>
+            </div>
+    </div>
+    </section>
+
+    </div>
+
+    <!-- JS -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/jquery-ui/jquery-ui.min.js"></script>
+    <script src="vendor/jquery-validation/dist/jquery.validate.min.js"></script>
+    <script src="vendor/jquery-validation/dist/additional-methods.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -565,9 +565,14 @@ include 'uploadTemp.php'
                 '<img src="assets/images/listtemp/' + fid +
                 '.jpg" alt="template" style="height:525px; box-shadow: 5px 5px 5px gray;">';
             document.getElementById("titl").innerHTML = 'Template Model ' + fid;
+            console.log(typeof(idfile));
+            console.log(idfile);
+
 
         }
         document.getElementById("svgg").addEventListener("click", function() {
+            console.log(typeof(idfile));
+            console.log(idfile);
             window.location.href = 'download.php?name=templates/' + idfile + '.docx';
         });
         </script>
