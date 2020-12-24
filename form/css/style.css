@@ -654,16 +654,6 @@ input.error {
     width: 100%;
 }
 
-#country,
-phone {
-    z-index: 99;
-}
-
-#city,
-phone {
-    z-index: 9;
-}
-
 @media screen and (max-width: 768px) {
     .container {
         width: calc(100% - 30px);

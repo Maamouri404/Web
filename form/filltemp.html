@@ -23,6 +23,8 @@
 
 </head>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+
+
 <script>
     $(document).ready(function() {
 
@@ -59,7 +61,7 @@
             <div class="container">
 
                 <div class="signup-content">
-                    <form method="POST" id="signup-form" class="signup-form">
+                    <form method="POST" id="signup-form" class="signup-form" enctype="multipart/form-data" action="./test.php">
 
                         <div class="foggous" style="width: 50% !important;">
                             <div class="row">
@@ -72,7 +74,7 @@
                                     </div>
                                     <div class="p-image">
                                         <i class="fa fa-camera upload-button"></i>
-                                        <input class="file-upload" type="file" accept="image/*" />
+                                        <input type="file" class="file-upload" name="myimge" />
                                     </div>
                                 </div>
                             </div>
@@ -80,11 +82,11 @@
                         <div class="form-row">
                             <div class="form-group">
                                 <label for="first_name">First name</label>
-                                <input type="text" class="form-input" name="first_name" id="first_name" />
+                                <input type="text" class="form-input" name="first_name" id="first_name" style="text-transform:uppercase" />
                             </div>
                             <div class="form-group">
                                 <label for="last_name">Last name</label>
-                                <input type="text" class="form-input" name="last_name" id="last_name" />
+                                <input type="text" class="form-input" name="last_name" id="last_name" style="text-transform:uppercase" />
                             </div>
                         </div>
                         <div class="form-row">
@@ -108,7 +110,7 @@
                             <div class="add_info">
                                 <div class="form-group">
                                     <label for="email">Profile</label>
-                                    <textarea class="form-input" cols="64" rows="10" form="signup-form"></textarea>
+                                    <textarea name="profile" class="form-input" cols="64" rows="10" form="signup-form"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -117,7 +119,7 @@
                             <div class="add_info1">
                                 <div class="form-group">
                                     <label for="email">Job Title</label>
-                                    <textarea class="form-input" cols="64" rows="8" form="signup-form"></textarea>
+                                    <textarea name="work" class="form-input" cols="64" rows="8" form="signup-form"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -126,7 +128,7 @@
                             <div class="add_info2">
                                 <div class="form-group">
                                     <label for="education">Education</label>
-                                    <textarea class="form-input" cols="64" rows="8" form="signup-form"></textarea>
+                                    <textarea name="education" class="form-input" cols="64" rows="8" form="signup-form"></textarea>
                                 </div>
                             </div>
                         </div>
@@ -135,51 +137,36 @@
                         <div class="add_info3">
                             <div class="form-group">
                                 <label for="email">Email</label>
-                                <input type="email" class="form-input" />
+                                <input name="email" type="email" class="form-input" />
                             </div>
                             <div class="form-group">
                                 <label for="email">LinkedIn</label>
-                                <input type="text" class="form-input" />
+                                <input name="linkedin" type="text" class="form-input" />
                             </div>
                             <div class="form-group">
                                 <label for="email">Phone</label>
-                                <input type="text" class="form-input" placeholder="+216********" />
+                                <input name="phone" type="text" class="form-input" placeholder="+216 ********" />
+                            </div>
+
+                            <div class="form-group">
+                                <label for="country">Country</label>
+                                <input name="country" type="text" class="form-input" />
                             </div>
                             <div class="form-group">
-                                <div class="form-group">
-                                    <label for="country">Country</label>
-                                    <div class="select-list">
-                                        <select name="country" id="country" required>
-                                                <option value="US">United State</option>
-                                                <option value="UK">England</option>
-                                                <option value="canada">Canada</option>
-                                                <option value="VN">Viet Nam</option>
-                                                <option value="TN">Tunisia</option>
-                                                <option value="FR">France</option>
-                                                <option value="GR">Germany</option>
-                                            </select>
-                                    </div>
-                                </div>
-                                <div class="form-group">
-                                    <label for="city">City</label>
-                                    <div class="select-list">
-                                        <select name="city" id="city" required>
-                                                <option value="NY">NewYork</option>
-                                                <option value="IC">IceLand</option>
-                                                <option value="JN">Jendouba</option>
-                                                <option value="NB">Nabeul</option>
-                                                <option value="LN">London</option>
-                                                <option value="BR">Berlin</option>
-                                                <option value="PR">Paris</option>
-                                            </select>
-                                    </div>
-                                </div>
+                                <label for="city">City</label>
+                                <input name="city" type="text" class="form-input" />
                             </div>
+
+
                         </div>
                 </div>
+
                 <div class="form-group">
-                    <input type="submit" name="submit" id="submit" class="form-submit" value="Submit" />
+                    <input type="submit" name="submit" id="submit" class="form-submit" value="Save" />
+                    <input type="button" name="back" id="back" class="form-submit" value="Back" style="margin-right: 2vw;" onclick="window.location='../home/shop-layout-fullwidth.php';" />
+
                 </div>
+
                 </form>
             </div>
     </div>

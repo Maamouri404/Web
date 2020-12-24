@@ -502,7 +502,7 @@ include 'uploadTemp.php'
                                     <div class="product--review">Overall Review</div>
                                     <script src="assets/js/btn.js"></script>
                                     <div class="btntn">
-                                        <a href="#" class="btn-liquid">
+                                        <a href="/projet_web/form/filltemp.html" class="btn-liquid">
                                             <span class="inner">Edit Template</span>
                                         </a>
                                     </div>
