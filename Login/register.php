@@ -13,12 +13,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $mypasswordc = mysqli_real_escape_string($db, $_POST['passwordc']);
 
     $sql = "INSERT INTO `admin`(`name`, `username`, `passcode`, `phone`, `email`) VALUES ('$name','$myusername','$mypassword','$myphone','$mymail')";
-    if ($mypassword === $mypasswordc && !empty($_POST["cond"])) {
+    if ($mypassword === $mypasswordc && !empty($_POST["cond"])&& !empty($_POST["name"])&& !empty($_POST["username"])&& !empty($_POST["phone"])&& !empty($_POST["phone"])&& !empty($_POST["email"])) {
         mysqli_query($db, $sql);
 
-        echo ("account created !");
+        header("Location:http://localhost/projet_web/login/log.php?type=success&message=Account Created ! Please Log In.. ");
 
     } else {
-        echo ("nooooo!");
+        header("Location:http://localhost/projet_web/login/log.php?type=error&message=Yebta fel Habta !");
     }
 }
