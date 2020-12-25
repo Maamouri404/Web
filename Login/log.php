@@ -119,7 +119,17 @@
                                         <span class="check-indicator"></span>
                                     </label>
                                 </div>
-                                <a href="#" class="forget--password"> Forgot your password?</a>
+                                <a href="#" onclick='{
+    
+    Swal.fire({
+        position: "top-end",
+        icon: "error",
+        title: "Mochkoltek",
+        customClass: "swal-wide",
+        showConfirmButton: false,
+        timer: 3000
+    })
+}'' class="forget--password"> Forgot your password?</a>
                             </div>
                             <!-- .col-lg-12 end -->
                             <div class="col-sm-12 col-md-12 col-lg-12 mb-30">
