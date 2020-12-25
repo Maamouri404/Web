@@ -293,7 +293,7 @@ session_start();
                 <details>
                     <summary>Is my CV also available for download in Word?</summary>
                     <div class="faq__content">
-                        <p>Yes you can xD</p>
+                        <p>Yes It Is xD</p>
                     </div>
                 </details>
 
