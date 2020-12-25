@@ -10,7 +10,7 @@
     <!--IE Compatibility Meta-->
     <meta name="author" content="Taher" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <link rel="icon" href="/images/modeles-de-cv-144x144-66x66.png" sizes="192x192">
+    <link href="../home/assets/images/favicon/iconl.png" rel="icon">
     <script src="jquery-3.3.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/2.1.2/sweetalert.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
@@ -31,7 +31,7 @@
 
     <!-- Document Title
     ============================================= -->
-    <title>Login</title>
+    <title>CV TEMP | Login</title>
 </head>
 <style>
 .swal-wide {
