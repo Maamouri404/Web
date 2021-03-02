@@ -352,7 +352,7 @@ session_start();
                     <div class="col-sm-12 col-md-4 col-lg-3">
                         <div class="cat--list-item">
                             <a href="#">
-                                <img style="width: 270px; height: 370px;" src="assets/images/categories/list/1.png"
+                                <img style="width: 270px; height: 370px;" src="assets/images/categories/list/1.jpg"
                                     alt="img">
                                 <h4># New</h4>
                             </a>
@@ -361,8 +361,8 @@ session_start();
                     <div class="col-sm-12 col-md-4 col-lg-3">
                         <div class="cat--list-item">
                             <a href="#">
-                                <img style="width: 270px; height: 370px;" src="assets/images/categories/list/2.png"
-                                    alt="img">
+                                <img style="width: 270px!important; height: 370px!important;"
+                                    src="assets/images/categories/list/2.jpg" alt="img">
                                 <h4># Modern</h4>
                             </a>
                         </div>
@@ -370,7 +370,7 @@ session_start();
                     <div class="col-sm-12 col-md-4 col-lg-3">
                         <div class="cat--list-item">
                             <a href="#">
-                                <img style="width: 270px; height: 370px;" src="assets/images/categories/list/3.png"
+                                <img style="width: 270px; height: 370px;" src="assets/images/categories/list/3.jpg"
                                     alt="img">
                                 <h4># Professional</h4>
                             </a>
